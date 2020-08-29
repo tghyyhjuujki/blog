@@ -59,8 +59,8 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
                 content: thumbnail,
               },
               {
-                name: "google-site-verification",
-                content: "6OpiQyRbIk8W82Rm2Gmd4pXpfU6hGkwbFYhhp0rGnmw",
+                name: 'google-site-verification',
+                content: '6OpiQyRbIk8W82Rm2Gmd4pXpfU6hGkwbFYhhp0rGnmw',
               }
             ]
               .concat(
