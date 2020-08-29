@@ -31,7 +31,7 @@ https://netlify.com
 
 <br/>
 
-빌드옵션을 세팅하고 배포하면 된다. 이제 터미널, cmd, powershell에서 `gatsby build` 라고 입력하면 자동으로 배포된다.
+빌드옵션을 세팅하고 배포하면 된다. 이제 터미널, powershell에서 build 명령어 입력하고(여기서는 gatsby build) git에 push하면 netlify가 감지하고 자동으로 배포해준다.
 
 ![image-20200826112808593](Gatsby_2.assets/image-20200826112808593.png)
 
