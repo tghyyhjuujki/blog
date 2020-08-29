@@ -109,21 +109,21 @@ $ npm install
 
 명령어를 실행하면 package.json에 있는 디펜던시의 모듈들을 설치한다.
 
-![image-20200825235626476](Gatsby_1.assets/\image-20200825235626476.png)
+![image-20200825235626476](Gatsby_1.assets/\image-20200825235626475.png)
 
 그러면 아래와 같은 디렉토리와 모듈들이 생성된다.
 
-![image-20200825235749406](Gatsby_1.assets/\image-20200825235749406.png)
+![image-20200825235749406](Gatsby_1.assets/\image-20200825235749405.png)
 
 만약 아래와 같은 에러가 떴다면,
 
-![image-20200826000917278](Gatsby_1.assets/\image-20200826000917278.png)
+![image-20200826000917278](Gatsby_1.assets/\image-20200826000917277.png)
 
 VScode 에서 권한문제이므로, [VScode PowerShell 에러](https://jeonghoon.netlify.app/Etc/powershell_error/)에서 확인하자
 
 <br/>
 
-![image-20200826002022404](Gatsby_1.assets/\image-20200826002022404.png)
+![image-20200826002022404](Gatsby_1.assets/\image-20200826002022403.png)
 
 위와 같은 명령어들을 사용할 수 있는데, gatsby develop 명령어로 개발모드로 실행해 로컬에서 잘 돌아가는지 확인해주자.
 
