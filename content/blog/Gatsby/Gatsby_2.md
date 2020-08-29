@@ -7,6 +7,12 @@ draft: false
 
 앞에서 만든 Gatsby 정적사이트를 Netlify를 통해 배포하는 과정이다.
 
+### Git add, commit, push
+
+먼저 [여기]()를 참고하여 Github repository를 생성해준다.
+
+### Netlify 에 배포하기
+
 먼저 Netlify에 가입한다.
 
 https://netlify.com
@@ -19,7 +25,7 @@ https://netlify.com
 
 단 3개의 과정으로 정적사이트를 배포 할 수 있다.
 
-먼저 git provider와 연결하고
+git provider와 연결하고
 
 ![image-20200826112509828](Gatsby_2.assets/image-20200826112509828.png)
 
@@ -31,11 +37,21 @@ https://netlify.com
 
 <br/>
 
-빌드옵션을 세팅하고 배포하면 된다. 이제 터미널, powershell에서 build 명령어 입력하고(여기서는 gatsby build) git에 push하면 netlify가 감지하고 자동으로 배포해준다.
+빌드옵션을 세팅하고 배포하면 된다. 이제 터미널, powershell에서 build 명령어 입력하고(여기서는 gatsby build) git repository에 push하면 netlify가 감지하고 자동으로 배포해준다.  
 
 ![image-20200826112808593](Gatsby_2.assets/image-20200826112808593.png)
 
 <br/>
+
+여기서 의문이 생겼는데, gatsby build는 왜 해줄까? gatsby docs에 다음과 같이 나와있다. 쉽게 말해서 컨텐츠를 각 페이지의 정보를 하나에 모아 배포하여 따로 서버가 필요하지 않게 된다는 것이다. 또한 페이지 내에 모든 컨텐츠가 있으니 검색엔지에 노출되기 쉬운 장점도 있다.
+
+![image-20200829224002699](Gatsby_2.assets/image-20200829224002699.png)
+
+따라서 gatsby로 만든 페이지소스를 보면 `실전압축` 되어있다.
+
+![image-20200829225200392](Gatsby_2.assets/image-20200829225200392.png)
+
+아무튼 build하고 repository에 push 해주자.
 
 ![image-20200826113443806](Gatsby_2.assets/image-20200826113443806.png)
 
