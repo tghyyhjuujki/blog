@@ -23,6 +23,8 @@ https://netlify.com
 
 ![image-20200826114322580](Gatsby_2.assets/image-20200826114322580.png)
 
+<br/>
+
 단 3개의 과정으로 정적사이트를 배포 할 수 있다.
 
 git provider와 연결하고
@@ -47,13 +49,19 @@ git provider와 연결하고
 
 ![image-20200829224002699](Gatsby_2.assets/image-20200829224002699.png)
 
+<br/>
+
 따라서 gatsby로 만든 페이지소스를 보면 `실전압축` 되어있다.
 
 ![image-20200829225200392](Gatsby_2.assets/image-20200829225200392.png)
 
+<br/>
+
 아무튼 build하고 repository에 push 해주자.
 
 ![image-20200826113443806](Gatsby_2.assets/image-20200826113443806.png)
+
+<br/>
 
 S3에도 정적사이트를 배포하는 기능이 있지만, 버킷도 만들어야 하고 권한도 설정해야 하고 HTTPS 인증도 받아야 하고 캐싱을 위한 CloudFront 설정도 해야한다. Netlify 는 이런 번거로운 과정을 생략하고 배포할수 있어서 굉장히 편했다.
 

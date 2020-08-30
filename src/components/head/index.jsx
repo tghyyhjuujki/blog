@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-export function Head({ description, lang, meta, keywords, title, thumbnail }) {
+export function Head({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -35,10 +35,6 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
                 content: `website`,
               },
               {
-                property: `og:image`,
-                content: thumbnail,
-              },
-              {
                 name: `twitter:card`,
                 content: `summary_large_image`,
               },
@@ -53,10 +49,6 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
               {
                 name: `twitter:description`,
                 content: metaDescription,
-              },
-              {
-                name: `twitter:image`,
-                content: thumbnail,
               },
               {
                 name: 'google-site-verification',

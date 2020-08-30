@@ -3,7 +3,6 @@ title: AWS Cloud Practitioner 취득후기
 date: 2020-08-25
 category: 취업일기
 draft: false
-thumbnail: ./aws_practitioner.assets/image-20200826011921910.png
 ---
 
 AWS(Amazon Web Service)에서는 본인들의 서비스에 대한 다음의 자격증을 발급한다. 생각보다 시험비가 싸지 않으므로 본인의 목적에 맞게 준비하고 취득하는 것이 좋아보인다.
