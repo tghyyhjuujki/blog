@@ -19,13 +19,14 @@ Netlify 배포하는 과정에서 실패를 하였다
 2. Version '12.18.0' not found. Failed to install node version. 라는 내용의 에러가 떳다.
 3. 내 node 버전이 12.16.0.이라 떠서 버전을 변경해줘야하는줄 알았다.
 4. 버전을 변경해줘도 fail이 떴고, Netlify 커뮤니티를 가보니 나와 같은 증상을 호소하는 환자들이 많았다.
-5. 결론은
+5. 네트워크 제공업체의 문제라는 공지가 올라왔다. 아마 CloudFlare 문제인듯싶다.
+6. gatsby를 사용 하다가 에러 떴으니 그냥 gatsby 카테고리에 넣어야겠다.
 
 ![image-20200830194923572](nvm.assets/image-20200830194923572.png)
 
 <br/>
 
-2. 에러 내용은 다음과 같았다.  Version '12.18.0' not found. Failed to install node version.
+에러 내용은 다음과 같았다.  Version '12.18.0' not found. Failed to install node version.
 
 ![image-20200830195057605](nvm.assets/image-20200830195057605.png)
 
@@ -65,4 +66,8 @@ Windows 환경일 경우 [여기](https://github.com/coreybutler/nvm-windows/rel
 
 <br/>
 
-설레는 마음으로 Netlify에 다시 배포해본다..
+이제 명령어 하나로 12.16.0 버전을 12.18.0버전으로 변경할 수 있다(반대도 가능).
+
+![image-20200830210238145](nvm.assets/image-20200830210238145.png)
+
+당연한 얘기지만 내 문제가 아니었기에 배포는 fail이 떴다. 아마 시간이 조금 지나면 개발팀이 빠르게 복구하겠지.
