@@ -21,7 +21,7 @@ for (int i = 0; i < temp.size(); ++i)
     temp2.push_back(tolower(temp[i]));
 cout << temp2;
 
-//asdf 출력.
+//asdf 출력
 ```
 
 
