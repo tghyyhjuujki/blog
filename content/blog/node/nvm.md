@@ -1,7 +1,7 @@
 ---
 title: Windows에서 nvm으로 node 버전 변경, 관리(feat. Netlify)
 date: 2020-08-30 19:08:85
-category: Gatsby
+category: Node
 draft: false
 ---
 
@@ -20,7 +20,7 @@ Netlify 배포하는 과정에서 실패를 했다
 3. 내 node 버전이 12.16.0.이라 떠서 버전을 변경해줘야하는줄 알았다.
 4. 버전을 변경해줘도 fail이 떴고, Netlify 커뮤니티를 가보니 나와 같은 증상을 호소하는 환자들이 많았다.
 5. 네트워크 제공업체의 문제라는 공지가 올라왔다. 아마 CloudFlare 문제인듯싶다. https://news.ycombinator.com/item?id=24322513 여기서 실시간으로 고통 받는 전세계 사람들을 확인할 수 있었다..ㅋㅋㅋ
-6. 아무튼 nvm 포스트는 만들었고, gatsby를 사용 하다가 에러 떴으니 그냥 gatsby 카테고리에 넣어야겠다.
+6. 아무튼 포스트는 만들었으니 nvm 버전관리로 올린다.
 
 ![image-20200830194923572](nvm.assets/image-20200830194923572.png)
 
@@ -93,3 +93,7 @@ $ nvm use [버전]
 ![image-20200830211233778](nvm.assets/image-20200830211233778.png)
 
 당연한 얘기지만 내 문제가 아니었기에 배포는 fail이 떴다. 아마 시간이 조금 지나면 개발팀이 빠르게 복구하겠지. 겸사겸사 `nvm` 설치와 실행에 대해 알아봤다.
+
+<br/>
+
+PS. 얼마 안지나서 Netlify는 복구되었다.
