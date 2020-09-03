@@ -1,6 +1,6 @@
 ---
 title: EC2 인스턴스에 node 및 모듈(mysql, express, body-parser) 설치하기
-date: 2020-09-01 11:09:89
+date: 2020-08-10 11:09:89
 category: Node
 draft: false
 ---
