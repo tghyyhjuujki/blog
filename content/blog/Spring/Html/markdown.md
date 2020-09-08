@@ -1,7 +1,7 @@
 ---
 title: 프로젝트) Mustache로 springboot html 작성
 date: 2020-05-01
-category: Project
+category: Etc
 draft: false
 ---
 

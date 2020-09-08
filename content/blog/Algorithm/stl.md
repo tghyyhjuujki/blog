@@ -42,6 +42,25 @@ cout << temp;
 
 
 
+### String 문자열 자르기
+
+```c
+#include <string>
+
+string str1 = "ASDF";
+for (int i = 0; i < str1.size() - 1; ++i) {
+    string temp = str1.substr(i, 2);
+    transform(temp.begin(), temp.end(), temp.begin(), ::tolower);
+    v1.push_back(temp);
+}
+
+// as, sd, df 들어있음
+```
+
+
+
+
+
 ---
 
 ## Vector
@@ -89,3 +108,86 @@ else cout << "있음";
 인덱스로 접근이 불가능함
 
 iterator도 못씀
+
+
+
+
+
+---
+
+## Map
+
+키가 중복 불가능한 해시테이블
+
+```c
+#include <map>
+
+map<char, int> m;
+string s = "aba";
+for(int i=0;i<s.size();++i)
+    m[s[i]]++;
+
+//a에 2 b에 1 저장되어있음
+
+// 이 키가 있는지 없는지 확인
+if(m.count("a")){
+    //키에 value 가 뭔지 확인
+    cout<< m["a"];
+}
+```
+
+
+
+---
+
+## Tree
+
+### 이진트리
+
+다음 문제가 이진트리 공부하기에 아주 좋다.
+
+[프로그래머스 길찾기게임](https://jeonghoon.netlify.app/Project/2018kakao_find_load/)
+
+---
+
+## 정렬
+
+기본
+
+```c
+#include <algorithm>
+
+//기본적인 정렬, 오름차순이 디폴트
+sort(nodeinfo.begin(), nodeinfo.end());
+```
+
+커스텀
+
+```c
+bool cmp(TREE a, TREE b) {
+	if (a.y == b.y)return a.x < b.x;
+	return a.y > b.y;
+}
+```
+
+
+
+우선순위 큐를 사용한 정렬, 구조체 사용
+
+```c
+//백준 16236 아기상어
+struct SHARK{
+	int r, c;
+}shark;
+
+priority_queue<SHARK> pq;
+
+bool operator<(SHARK a, SHARK b) {
+	if (a.r == b.r) return a.c > b.c;
+	return a.r > b.r;
+}
+
+//push 하면 오퍼레이터 적용됨
+ pq.push({ nr,nc })
+```
+

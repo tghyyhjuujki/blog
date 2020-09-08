@@ -1,7 +1,7 @@
 ---
 title: 미니프로젝트)RDS - Master, slave 생성 및 SSH 접속
 date: 2020-08-29
-category: Aws
+category: Project
 draft: false
 ---
 
@@ -23,8 +23,8 @@ Aws EC2 인스턴스 존재해야함([AWS EC2 시작 및 SSH 접속하기](https
 
 1. MySQL Workbench를 이용하여 DataBase 쿼리 생성
 2. 클라이언트 용 Python file 작성
-3. **RDS - Master, slave 생성**
-4. RDS와 클라이언트 연결하는 node 서버 만들기
+3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/AWS/aws_rds/)
+4. [RDS와 클라이언트 연결하는 node 서버 만들기](https://jeonghoon.netlify.app/node/node_http_methods/)
 5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
 6. CloudWatch, AWS SNS 연동
 7. CodeDeploy를 통한 배포 구축
