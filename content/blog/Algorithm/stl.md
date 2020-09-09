@@ -97,6 +97,27 @@ if(iter == v.end())
 else cout << "있음";
 ```
 
+문자열 안에서 문자열 찾기
+
+```c
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string a="hi hello";
+
+    if(a.find("hi")>=0){
+        cout<<a.find("hi")<<endl;
+    }
+    if(a.find("hello")>=0){
+        cout<<a.find("hello")<<endl;
+    }
+    return 0;
+}
+//각각 시작 인덱스인 0, 3이 출력됨
+```
+
 
 
 
@@ -135,6 +156,21 @@ if(m.count("a")){
     cout<< m["a"];
 }
 ```
+
+### 순회
+
+```c
+#include <map>
+map<string, int> m; // m에 값이 있다는 가정하에
+
+map<string, int> ::iterator iter;
+for (iter = m.begin(); iter != m.end(); ++iter) {
+    if (iter->second > 0)
+        answer = iter->first;
+}
+```
+
+
 
 
 
