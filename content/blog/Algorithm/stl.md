@@ -59,6 +59,27 @@ for (int i = 0; i < str1.size() - 1; ++i) {
 
 
 
+### String to int
+
+```c
+#include <string>
+
+string temp="";
+for (int i = 0; i < 5; ++i)
+	temp += to_string(i);    // 방법 1, 가끔 사용 불가능할 때 있음
+	temp += i+'0';			// 방법 2, 편법으로 매우 유용하게 사용 가능
+```
+
+
+
+### int to String
+
+```c
+int temp = 0;
+char a = 'a';
+temp += a -'0'; // 편법으로 유용하게 사용 가능
+```
+
 
 
 ---
@@ -72,6 +93,20 @@ for (int i = 0; i < str1.size() - 1; ++i) {
 ```c
 vector<int> v{ 1, 2, 3, 4, 5}; // 벡터 초기화
 v.erase(v.begin() + 3);  // v{1, 2, 3, 5}
+```
+
+
+
+### 사이즈 동적할당
+
+```c
+// 1차원
+v.assign(size, 0); // size만큼 0을 할당함, 초기화 뒤에도 사용 가능
+
+// 2차원
+int row = 15;
+int col = 10;
+v.assign(row, vector<int>(col, 1));
 ```
 
 
@@ -168,6 +203,27 @@ for (iter = m.begin(); iter != m.end(); ++iter) {
     if (iter->second > 0)
         answer = iter->first;
 }
+```
+
+
+
+---
+
+## Set
+
+중복을 처리해줘야할 때 사용 가능
+
+ex) dfs에서 중복을 처리할  때 사용 가능
+
+[불량사용자](https://programmers.co.kr/learn/courses/30/lessons/64064)가 좋은 예시
+
+```c
+#include <set>
+string temp="";
+for (int i = 0; i < check.size(); ++i) {
+        temp += i+'0';
+}
+s.insert(temp);
 ```
 
 
