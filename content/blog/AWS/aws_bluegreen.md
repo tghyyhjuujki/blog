@@ -1,8 +1,30 @@
 ---
 title: Aws로 Blue, Green 배포 구축하기
-date: 2020-08-06
+date: 2020-10-04
 category: Aws
 draft: false
+---
+
+### 작업환경
+
+Windows10
+
+Aws 프리티어 계정
+
+[AWS EC2 시작 및 SSH 접속하기](https://jeonghoon.netlify.app/AWS/Aws/markdown/), [Aws로 EC2와 RDS 연결하기](https://jeonghoon.netlify.app/AWS/aws_rds_connect/), [Aws로 Auto Scaling Group 만들기](https://jeonghoon.netlify.app/AWS/aws_autoscaling/)완료상태
+
+</br>
+
+지난번 만든까지 만든 아키텍처는 다음과 같다.
+
+![image-20201005035001139](aws_bluegreen.assets/image-20201005035001139.png)
+
+<br/>
+
+이번에 만들 아키텍처는 다음과 같다. 로드밸런서를 만들어주고 웹에서 접속가능하게 만들어줄 것이다.
+
+![image-20200826140322287](aws_bluegreen.assets/image-20200826140322287.png)
+
 ---
 
 ### Blue / Green 배포란?
@@ -25,4 +47,3 @@ green 그룹에 업데이트를 적용하고기존에 있던 blue 그룹의 연�
 
 
 
-![image-20200826140322287](aws_bluegreen.assets/image-20200826140322287.png)
