@@ -143,6 +143,12 @@ Auto Scaling Group 크기는 모두 2로 선택
 
 ![image-20201006001210486](aws_bluegreen.assets/image-20201006001210486.png)
 
+<br/>
+
+대상그룹에서 인스턴스 2개의 상태가 health로 나오면 로드밸런서가 정상 작동하는 것이다. 가끔 오작동이 있기 떄문에 failed로 떠도 로드밸런서는 정상작동 한다.
+
+![image-20201006003017678](aws_bluegreen.assets/image-20201006003017678.png)
+
 
 
 생성된 로드밸런서를 확인해보면 DNS를 확인할 수 있다.
