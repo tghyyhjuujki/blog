@@ -1,7 +1,7 @@
 ---
 title: SK Infosec 합격
 date: 2020-07-03
-category: 취업일기
+category: 
 draft: false
 ---
 

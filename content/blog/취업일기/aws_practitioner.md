@@ -1,7 +1,7 @@
 ---
 title: AWS Cloud Practitioner 취득후기
 date: 2020-08-25
-category: 취업일기
+category: Certificate
 draft: false
 ---
 
@@ -11,7 +11,7 @@ AWS(Amazon Web Service)에서는 본인들의 서비스에 대한 다음의 자�
 
 ![image-20200826093814179](aws_practitioner.assets/image-20200826093814179.png)
 
-- Practitioner  -100$
+- **Practitioner  -100$**
 - Associate - 150$
 - Professional - 300$
 - Specialty - 300$

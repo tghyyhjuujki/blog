@@ -20,6 +20,16 @@ Email : tghyyhju@gmail.com
 
 <br/>
 
+## Certificate
+
+2019.08.16 | 정보처리기사
+
+2020.08.25 | AWS Certified Cloud Practitioner
+
+2020.10.25 | AWS Certified SA Associate
+<br/>
+
+
 ## Education
 
 2012.03 ~ 2019.02 | 상명대학교 게임학과
