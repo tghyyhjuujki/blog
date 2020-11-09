@@ -21,7 +21,7 @@ Aws RDS 존재해야함 ([RDS - Master, slave 생성]()참고)
 
 <br/>
 
-## 미니프로젝트 - 중고자동차 판매점
+## 토이프로젝트 - 중고자동차 판매점
 
 1. MySQL Workbench를 이용하여 DataBase 쿼리 생성
 2.  클라이언트 용 Python file 작성
