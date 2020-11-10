@@ -24,12 +24,12 @@ Windows10
 목표 2 : Docker로 MySQL, python 이미지 생성 후 compose 구성
 
 1. [**<u>MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(1)</u>**](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_images/)
-2. MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(2)
+2. [MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(2)](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_compose/)
 
 목표 3 : AWS, node.js를 추가하여 자동 확장 가능한 3티어 아키텍처 구축
 
 3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_rds/)
-4. [**RDS와 클라이언트 연결하는 node 서버 만들기**](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
+4. [RDS와 클라이언트 연결하는 node 서버 만들기](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
 5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
 6. CloudWatch, AWS SNS 연동
 7. CodeDeploy를 통한 배포 구축
@@ -370,4 +370,6 @@ $ python3 python.py
 
 <br/>
 
-다음 글에서 Compose로 MySQL과 파이썬을 연동해보겠다.
+### <u>하지만, 이렇게 하면 Compose 할 때 당연히 안 될 것이다 </u>
+
+다음 포스트에서 문제점 및 해결책을 알아보자.

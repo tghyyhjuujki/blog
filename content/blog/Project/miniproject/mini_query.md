@@ -17,14 +17,14 @@ Windows10
 
 목표1 : 로컬에서 MySQL, python으로 CRUD 쿼리 처리 가능한 2티어 아키텍처 구축
 
-1. **[<u>개요 및 MySQL Workbench를 이용하여 DataBase 쿼리 생성</u>](https://jeonghoon.netlify.app/Project/miniproject/mini_query/)**
+1. [**<u>개요 및 MySQL Workbench를 이용하여 DataBase 쿼리 생성</u>**](https://jeonghoon.netlify.app/Project/miniproject/mini_query/)
 
 2. [Python으로 클라이언트 용  스크립트 작성](https://jeonghoon.netlify.app/Project/miniproject/mini_python/)
 
 목표 2 : Docker로 MySQL, python 이미지 생성 후 compose 구성
 
-1. MySQL, Python 이미지 생성
-2. compose.yml 작성 및 구축
+1. [MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(1)](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_images/)
+2. [MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(2)](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_compose/)
 
 목표 3 : AWS, node.js를 추가하여 자동 확장 가능한 3티어 아키텍처 구축
 

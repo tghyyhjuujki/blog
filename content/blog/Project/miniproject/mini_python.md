@@ -19,17 +19,17 @@ Windows10
 
 1. [개요 및 MySQL Workbench를 이용하여 DataBase 쿼리 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_query/)
 
-2. **[<u>Python으로 클라이언트 용  스크립트 작성</u>](https://jeonghoon.netlify.app/Project/miniproject/mini_python/)**
+2. [**<u>Python으로 클라이언트 용  스크립트 작성</u>**](https://jeonghoon.netlify.app/Project/miniproject/mini_python/)
 
 목표 2 : Docker로 MySQL, python 이미지 생성 후 compose 구성
 
-1. MySQL, Python 이미지 생성
-2. compose.yml 작성 및 구축
+1. [MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(1)](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_images/)
+2. [MySQL, Python 이미지 생성 / compose.yml 작성 및 구축(2)](https://jeonghoon.netlify.app/Project/miniproject/mini_docker_compose/)
 
 목표 3 : AWS, node.js를 추가하여 자동 확장 가능한 3티어 아키텍처 구축
 
 3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_rds/)
-4. [**RDS와 클라이언트 연결하는 node 서버 만들기**](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
+4. [RDS와 클라이언트 연결하는 node 서버 만들기](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
 5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
 6. CloudWatch, AWS SNS 연동
 7. CodeDeploy를 통한 배포 구축
