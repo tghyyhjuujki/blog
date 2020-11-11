@@ -30,9 +30,7 @@ Windows10
 
 3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_rds/)
 4. [RDS와 클라이언트 연결하는 node 서버 만들기](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
-5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
-6. CloudWatch, AWS SNS 연동
-7. CodeDeploy를 통한 배포 구축
+5. [AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결](https://jeonghoon.netlify.app/Project/miniproject/mini_autoscaling/)
 
 <br/>
 
@@ -40,7 +38,9 @@ Windows10
 
 ## 개요
 
-구글에 `Car dealership ERD`를 검색해보면 과거 개발자들의 노력을 엿볼 수 있다. 나도 그들의 발자취를 따라가기 위해 Car Dealership을 이번 토이프로젝트 주제로 선정했다. 이 요구사항 명세서를 가지고 docker, AWS에서 CRUD를 구현하는 것이 목표이다.
+구글에 `Car dealership ERD`를 검색해보면 과거 개발자들의 노력을 엿볼 수 있다. 나도 그들의 발자취를 따라가기 위해 Car Dealership을 이번 토이프로젝트 주제로 선정했다. 이 요구사항 명세서를 가지고 docker, AWS에서 CRUD를 구현하는 것이 목표이다. 특히 AWS로는 다음과 같은 아키텍처를 구상하고 있다.
+
+![image-20201111234124667](mini_query.assets/image-20201111234124667.png)
 
 ---
 

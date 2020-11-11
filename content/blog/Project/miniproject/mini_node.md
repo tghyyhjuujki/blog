@@ -34,9 +34,7 @@ Aws 프리티어 계정
 
 3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_rds/)
 4. [**<u>RDS와 클라이언트 연결하는 Rest API node 서버 만들기</u>**](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
-5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
-6. CloudWatch, AWS SNS 연동
-7. CodeDeploy를 통한 배포 구축
+5. [**<u>AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결</u>**](https://jeonghoon.netlify.app/Project/miniproject/mini_autoscaling/)
 
 <br/>
 
@@ -257,7 +255,7 @@ app.post('/Customer/insert', (req, res) => {
 ```python
 import requests
 
-url = 'EC2 인스턴스의 퍼블릭 DNS'
+url = 'http://ec2-3-34-4-109.ap-northeast-2.compute.amazonaws.com:8000'
 def print_mechanic(result):
     print('[MECHANIC]')
     print("---------------------------------------------------------------------------------------------------------")
@@ -873,7 +871,7 @@ app.listen(app.get('port'), () => {
 
 <br/>
 
-그리고 [클라이언트 용 Python file 작성]()에서 만든 test.py를 아무데서나 실행시켜주자. 주의할 것은 외부 다른 컴퓨터에서 실행할 경우, AWS 보안그룹에 외부IP를 추가해줘야한다. 
+그리고 [클라이언트 용 Python file 작성]()에서 만든 test.py를 아무데서나 실행시켜주자. 
 
 고객정보 조회를 했더니 데이터가 없어 아무 것도 안나온다.  데이터를 추가해야겠다.
 

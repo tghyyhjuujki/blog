@@ -30,9 +30,7 @@ Windows10
 
 3. [RDS - Master, slave 생성](https://jeonghoon.netlify.app/Project/miniproject/mini_rds/)
 4. [RDS와 클라이언트 연결하는 node 서버 만들기](https://jeonghoon.netlify.app/Project/miniproject/mini_node/)
-5. AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결
-6. CloudWatch, AWS SNS 연동
-7. CodeDeploy를 통한 배포 구축
+5. [AutoScaling 그룹 생성 및 ELB(elastic Load Balancer) 연결](https://jeonghoon.netlify.app/Project/miniproject/mini_autoscaling/)
 
 <br/>
 
