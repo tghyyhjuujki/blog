@@ -1,6 +1,6 @@
 ---
 title: 토이프로젝트)MySQL, Python의 Docker이미지 생성 / compose.yml 작성 및 구축(1)
-date: 2020-08-20
+date: 2020-09-20
 category: Project
 draft: false
 ---

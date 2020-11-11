@@ -1,6 +1,6 @@
 ---
 title: 토이프로젝트)Python으로 클라이언트 용 스크립트 작성
-date: 2020-08-17
+date: 2020-09-17
 category: Project
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: 토이프로젝트)개요 및 MySQL Workbench를 이용하여 DataBase 쿼리 생성
-date: 2020-08-15
+date: 2020-09-15
 category: Project
 draft: false
 ---

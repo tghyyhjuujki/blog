@@ -1,7 +1,7 @@
 ---
 title: 프로젝트)예약서비스 Booker 훑어보기
 date: 2020-09-07 09:09:54
-category: Project
+category:
 draft: false
 ---
 
