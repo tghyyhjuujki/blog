@@ -81,9 +81,9 @@ Aws 프리티어 계정
 npm init
 ```
 
-여러 물음이 나오는, 디폴트로 설정할 예정이므로 엔터로 건너뛰자.
+여러 물음이 나오는데, 디폴트로 설정할 예정이므로 엔터로 건너뛰자.
 
-package.json 내용이다. 기본적인 버전과 지난 포스트에서 설치한 body-parser, express, mysql 모듈들이 dependencies에 설치된 것을 볼 수 있다. 하나 추가할 것이, devDependencies 안에 시작명령어를 넣어줘야한다.
+package.json 내용이다. 기본적인 버전과 지난 포스트에서 설치한 body-parser, express, mysql 모듈들이 dependencies에 설치된 것을 볼 수 있다. 하나 추가할 것이, scripts 안에 시작명령어를 넣어줘야한다.
 
 ```js
 "start" : "node index.js",
@@ -115,10 +115,6 @@ var res_state='complete'; // 요청이 성공적으로 실행되면 클라이언
 
 <br/>
 
-현재 파일 및 디렉토리 상태이다.
-
-![image-20200904005820677](node_http_methods.assets/image-20200904005820677.png)
-
 아래의 내용을 config 파일들에게 저장해준다. database.js에는 master DB 엔드포인트를, database-slave.js에는 slave DB 엔드포인트를 넣는다.
 
 ```js
@@ -129,6 +125,12 @@ module.exports = {
   database : 'mydb'
 }
 ```
+
+<br/>
+
+현재 파일 및 디렉토리 상태이다.
+
+![image-20200904005820677](node_http_methods.assets/image-20200904005820677.png)
 
 <br/>
 
@@ -166,7 +168,7 @@ insert, update는 node에서 post방식
 
 delete는 node에서 delete방식으로 요청과 응답을 하도록 구현하였다.
 
-클라이언트(Python)에서 get방식으로 모든 DML을 날려도 되지만, 그렇게 구현하면 url에 클라이언트가 요청한 모든 정보가 노출되는 엄청난 보안사고가 발생한다(...). 따라서 각 DML에 맞는 Http Method를 사용하는 것이 바람직하다.
+클라이언트(파이썬)에서 get방식으로 모든 DML을 날려도 되지만, 그렇게 구현하면 url에 클라이언트가 요청한 모든 정보가 노출되는 엄청난 보안사고가 발생한다(...). 따라서 각 DML에 맞는 Http Method를 사용하는 것이 바람직하다.
 
 <br/>
 
@@ -909,7 +911,7 @@ RDS도 확인해보면 잘 들어가있다.
 
 ![image-20201111180605829](mini_node.assets/image-20201111180605829.png)
 
-
+<br/>
 
 겸사겸사 Rest API 명세서를 작성해봤다.
 
