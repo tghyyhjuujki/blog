@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(6)-Stack/Swarm 연습
+title: Docker) Stack/Swarm 연습
 date: 2020-08-07
 category: Docker
 draft: false

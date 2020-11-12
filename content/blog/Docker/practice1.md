@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(1)-설치 및 간단사용법
+title: Docker) 설치 및 간단사용법
 date: 2020-05-03
 category: Docker
 draft: false

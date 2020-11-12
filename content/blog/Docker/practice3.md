@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(3)-기본 명령어
+title: Docker) 기본 명령어
 date: 2020-07-20
 category: Docker
 draft: false

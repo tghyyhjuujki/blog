@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(2)-사용환경설정(Vagrant, Linux)
+title: Docker) 사용환경설정(Vagrant, Linux)
 date: 2020-07-14
 category: Docker
 draft: false

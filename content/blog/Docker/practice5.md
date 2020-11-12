@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(5)-Swarm/Compose
+title: Docker) Swarm/Compose
 date: 2020-07-22
 category: Docker
 draft: false

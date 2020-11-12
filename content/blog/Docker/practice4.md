@@ -1,5 +1,5 @@
 ---
-title: Docker 연습(4)-볼륨마운트/DockerFile
+title: Docker) 볼륨마운트/DockerFile
 date: 2020-07-21
 category: Docker
 draft: false
