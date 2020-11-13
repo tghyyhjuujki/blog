@@ -1,5 +1,5 @@
 ---
-title: Network) OSI 1계층:물리계층 / 2계층:데이터링크 계층
+title: Network) OSI 1계층-물리계층 / 2계층-데이터링크 계층
 date: 2020-11-03
 category: Network
 draft: false
