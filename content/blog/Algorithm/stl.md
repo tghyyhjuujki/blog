@@ -238,7 +238,7 @@ s.insert(temp);
 
 다음 문제가 이진트리 공부하기에 아주 좋다.
 
-[프로그래머스 길찾기게임](https://jeonghoon.netlify.app/Project/2018kakao_find_load/)
+[프로그래머스 길찾기게임](https://jeonghoon.netlify.app//Algorithm/Programmers/2019kakao_find_load/)
 
 ---
 

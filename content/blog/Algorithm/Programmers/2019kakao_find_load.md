@@ -1,5 +1,5 @@
 ---
-title: 2018 kakao blind [1차]) 뉴스 클러스터링
+title: 2019 kakao blind [1차]) 길찾기 게임
 date: 2020-09-01 18:08:57
 category: Algorithm
 draft: false
