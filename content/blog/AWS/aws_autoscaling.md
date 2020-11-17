@@ -1,6 +1,6 @@
 ---
 title: Aws로 Auto Scaling Group 만들기
-date: 2020-10-03
+date: 2020-07-03
 category: Aws
 draft: false
 ---

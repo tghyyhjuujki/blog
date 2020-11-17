@@ -1,6 +1,6 @@
 ---
 title: Aws로 Blue, Green 배포 구축하기(1)
-date: 2020-10-04
+date: 2020-06-04
 category: Aws
 draft: false
 ---

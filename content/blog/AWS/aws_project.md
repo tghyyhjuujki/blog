@@ -1,6 +1,6 @@
 ---
 title: Aws로 프로젝트 구축하기
-date: 2020-08-10
+date: 2020-06-10
 category: Aws
 draft: false
 ---

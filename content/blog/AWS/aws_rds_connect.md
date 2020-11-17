@@ -1,6 +1,6 @@
 ---
 title: Aws로 EC2와 RDS 연결하기
-date: 2020-10-01
+date: 2020-07-01
 category: Aws
 draft: false
 ---
