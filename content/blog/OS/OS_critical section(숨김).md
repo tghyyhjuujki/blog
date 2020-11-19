@@ -1,7 +1,7 @@
 ---
 title: Operation System) 임계구역
 date: 2020-11-14
-category: Network
+category: 
 draft: false
 ---
 
