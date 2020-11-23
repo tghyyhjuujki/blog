@@ -40,19 +40,11 @@ Spring Boot는 단독 실행 가능한 어플리케이션 플랫폼이다. 간�
 
 ### Spring boot 프로젝트 생성
 
-일단 여러 방법이 있는데 start.spring.io
+일단 여러 방법이 있는데, 이클립스에서도 개발이 가능하지만, 여기서는 IntelliJ IDAE를 사용하겠다. 이게 뭔지 간단히 말하자면. 이클립스처럼 IDE(통합 개발 환경)이다.
 
-[start.spring.io](start.spring.io)에 접속하여 기본 틀을 생성해주자. 참고로 이 작업은 이클립스 안에서도 가능하다.
+[IntelliJ 설치](https://www.jetbrains.com/ko-kr/idea/download/#section=windows)에서 다운받을 수 있다.
 
-![image-20201123223522550](SpringBoot2.assets/image-20201123223522550.png)
-
-왼쪽에서 버전 및 이름 설정이 가능하고, 오른쪽에서는 디펜던시 모듈을 추가할 수 있다. 난 Spring Web과 JPA를 선택했다. 아래 GENERATE를 누르면 옵션에 맞는 파일을 알집으로 제공해준다.
-
-<br/>
-
-이클립스에서도 개발이 가능하지만, 여기서는 IntelliJ IDAE를 사용하겠다. 이게 뭔지 간단히 말하자면. 이클립스처럼 IDE(통합 개발 환경)이다.
-
-다음과 같이 Spring Initializr를 선택하고 start.spring.io를 선택한다.
+설치하고 실행한 후, 다음과 같이 Spring Initializr를 선택하고 start.spring.io를 선택한다.
 
 ![image-20201123231247059](SpringBoot2.assets/image-20201123231247059.png)
 
@@ -97,3 +89,8 @@ server:
 
 ![image-20201124003431440](SpringBoot2.assets/image-20201124003431440.png)
 
+<br/>
+
+http://localhost:8088/에 접속하면 실행되고 있는게 보인다!
+
+![image-20201124010239214](SpringBoot2.assets/image-20201124010239214.png)
