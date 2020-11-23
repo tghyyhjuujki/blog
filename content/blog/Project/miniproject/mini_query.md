@@ -114,7 +114,8 @@ ERD로 쿼리를 생성해주자. Workbench에서 `File > export > Forword Engin
 
 <br/>
 
-<details> <summary>생성된 쿼리 보기</summary> <div markdown="1">
+<details> <summary>생성된 쿼리 보기(클릭)</summary> <div markdown="1">
+
 
 ```sql
 -- MySQL Workbench Forward Engineering

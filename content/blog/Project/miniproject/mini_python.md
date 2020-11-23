@@ -138,7 +138,8 @@ conn.commit() # 커넥팅 된 서버에 반영
 
 이와 같은 규칙으로 전체 코드를 작성하였다.
 
-<details> <summary>소스코드 보기</summary> <div markdown="1">
+<details> <summary>소스코드 보기(클릭)</summary> <div markdown="1">
+
 
 ```python
 import pymysql
