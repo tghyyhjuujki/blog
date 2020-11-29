@@ -1,5 +1,5 @@
 ---
-title: Spring Boot에서 Bean과 lombok
+title: Spring boot) Bean과 lombok
 date: 2020-11-11
 category: Spring
 draft: false
@@ -46,7 +46,7 @@ public class HelloWorldBean {
         this.message = msg;
     }
 
-    public HelloWorldBean(String massage) { // 생성자
+    public HelloWorldBean(String message) { // 생성자
         this.message = message;
     }
 }
@@ -73,7 +73,7 @@ Lombok의 @Date 애노테이션을 사용하면, 위의 코드를 아래와 같�
 public class HelloWorldBean {
     private String message;
 
-    public HelloWorldBean(String massage) {
+    public HelloWorldBean(String message) {
         this.message = message;
     }
 }

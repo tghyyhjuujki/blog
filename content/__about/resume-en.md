@@ -35,5 +35,3 @@ Email : tghyyhju@gmail.com
 2012.03 ~ 2019.02 | 상명대학교 게임학과
 
 2019.12 ~ 2020.06 | 삼성 멀티캠퍼스 Cloud MSA
-
-2020.07 ~ Present | SK Infosec Cloud Security

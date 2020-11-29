@@ -1,5 +1,5 @@
 ---
-title: Spring Boot에서 REST API 사용 환경 만들기(@RestCotroller, @GetMapping)
+title: Spring boot) REST API 사용 환경 만들기(@RestCotroller, @GetMapping)
 date: 2020-11-04
 category: Spring
 draft: false
