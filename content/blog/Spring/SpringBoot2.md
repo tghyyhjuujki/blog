@@ -91,6 +91,6 @@ server:
 
 <br/>
 
-http://localhost:8088/에 접속하면 실행되고 있는게 보인다!
+http://localhost:8088/ 에 접속하면 실행되고 있는게 보인다!
 
 ![image-20201124010239214](SpringBoot2.assets/image-20201124010239214.png)
