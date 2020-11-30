@@ -8,18 +8,6 @@ draft: false
 
 
 
-
-
-
-
-
-
-
-
-
-
-<br/>
-
 ## 상태코드 관리
 
 ### ServletUriComponentsBuilder
@@ -78,7 +66,7 @@ Headers의 Location에서는 새로 추가된 URI를 확인할 수 있다. id는
 
 아래를 보자. DB에는 존재하지 않는 id 100번을 호출하면 값은 NULL인데 상태코드가 200으로 정상이라고 뜬다. 따라서 이부분은 에러를 발생시키도록 수정해야한다.
 
-![image-20201129234343044](SpringBoot7-status-code.assets/image-20201129234343044.png)
+![image-20201130150634782](SpringBoot7-status-code.assets/image-20201130150634782.png)
 
 <br/>
 
@@ -154,3 +142,87 @@ public class UserNotFoundException extends RuntimeException {
 
 ### 일반화된 예외클래스
 
+AOP(Aspect Oriented Programming) : 관점 지향 프로그래밍. 비즈니스 로직에서 관점별로 나누어보고, 그 기준으로 각각을 모듈화하는 프로그래밍 방식이다. 간단히 말하면, 애플리케이션 전체에 걸쳐 사용되는 기능을 모듈화하여 재사용 하는 것이다.
+
+이러한 AOP 관점에서 예외처리 클래스를 작성해보자. 먼저 ExceptionResponse 필드를 다음과 같이 작성한다.
+
+```java
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ExceptionResponse {
+    private Date timestamp; // 에러가 발생한 시간
+    private String message; // 메세지 담을 필드
+    private String details; // 상세내용 담을 필드
+}
+```
+
+<br/>
+
+내가 정의한 CustomizedResponseEntityExceptionHandler 클래스를 만들어준다. 
+
+@ContrpllerAdvice는 전역에서 발생할 예외를 처리할수 있게 한다. 모든 컨트롤러가 실행될 때 이 클래스가 실행 될 것이다.
+
+@ExceptionHandler 애노테이션은 @Controller와 @RestController이 적용된 Bean 내에서 발생하는예외를 처리하는 메소드 기능을 하게 해준다.
+
+handleAllExceptions의 매개변수로 에러난 객체를 ex, 에러 리퀘스트를 request로 받아오도록 선언하였다. 
+
+그리고 각 에러에 대한 객체를 만들고 날짜, 에러난 객체, 요청에 대한 상세정보를 리턴하도록 구성하였다.
+
+```java
+@RestController
+// 전역에 발생할 수 있는 예외를 처리해줌. 이게 @ExcptionalHandler와 차이점
+@ControllerAdvice
+public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
+    // 모든 예외를 처리하는 메소드
+    // Bean 내에서 발생하는 예외를 처리
+    @ExceptionHandler(Exception.class)
+    public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request){
+        ExceptionResponse exceptionResponse =
+                new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+}
+```
+
+<br/>
+
+포스트맨으로 없는 데이터를 조회하면, 다음과 같이 500에러와 함께 에러 내용이 나온다. 하지만 없는 데이터를 조회했으므로 클라이언트 측의 에러 즉, 404에러가 나와야한다. 
+
+![image-20201130155211062](SpringBoot7-status-code.assets/image-20201130155211062.png)
+
+<br/>
+
+따라서 CustomizedResponseEntityExceptionHandler 클래스 안에 사용자가 존재하지 않을 때 처리하는 메소드를 추가해준다. 리턴값을 HttpStatus.NOT_FOUND로 변경해준다.
+
+```java
+@RestController
+// 전역에 발생할 수 있는 예외를 처리해줌. 이게 @ExcptionalHandler와 차이점
+@ControllerAdvice
+public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
+    //모든 예외를 처리하는 메소드
+    // Bean 내에서 발생하는 예외를 처리
+    @ExceptionHandler(Exception.class)
+    public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request){
+        ExceptionResponse exceptionResponse =
+                new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // 사용자가 존재하지 않았을 때 처리하는 메소드
+    @ExceptionHandler(UserNotFoundException.class)
+    public final ResponseEntity<Object> handleUserNotFoundException(Exception ex, WebRequest request){
+        ExceptionResponse exceptionResponse =
+                new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+    }
+}
+```
+
+<br/>
+
+다시 포스트맨에서 조회해보면, 404에러가 뜬 것을 확인할 수 있다. 이제 없는 데이터를 조회하면 404에러, 그 외의 에러는 서버측, 500에러로 뜰 것이다.
+
+![image-20201130155751316](SpringBoot7-status-code.assets/image-20201130155751316.png)

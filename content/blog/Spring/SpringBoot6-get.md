@@ -175,20 +175,150 @@ public class UserController {
 
 <br/>
 
+## DELETE - 사용자 삭제
+
+POST와 구조적으로 동일하다.조금만 수정해주자. 먼저 UserDaoService에 deleteById메소드를 추가해주자. 사용자 데이터가 리스트에 들어있으므로 반복자를 만들어주자. 사용자 아이디가 없으면 반복자에서 삭제 후 리턴한다.
+
+```java
+@Service
+public class UserDaoService {
+
+    public User deleteById(int id){
+        Iterator<User> iterator = users.iterator();
+
+        while(iterator.hasNext()){
+            User user = iterator.next();
+
+            if(user.getId() == id){
+                iterator.remove();
+                return user;
+            }
+        }
+        return null;
+    }
+}
+```
+
+<br/>
+
+<br/>
+
+<br/>
+
+그리고 @DeleteMapping 애노테이션을 사용하여 UserController 클래스에 deleteUser 메소드를 추가해준다. 
+
+```java
+@RestController
+@AllArgsConstructor
+public class UserController {
+    
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id){
+        User user = service.deleteById(id);
+    }
+}
+```
+
+<br/>
+
+데이터가 3개 들어있고 DELETE 요청을 보내면, 다시 조회했을 때 정상적으로 사라진 것을 확인할 수 있다.
+
+![image-20201130145035285](SpringBoot6-get.assets/image-20201130145035285.png)
+
+<br/>
+
+하지만 이 소스에는 예외처리를 하지 않는다는 문제가 있다. 없는 사용자를 조회하거나 삭제할 때 에러메세지나 상태코드를 변경해주어야한다. 다음 포스트에서 알아보자.
+
+<br/>
+
 <details> <summary>User 전체 소스(클릭)</summary> <div markdown="1">
+
+```java
+package com.example.restfulwebservice.user;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+@AllArgsConstructor
+public class User {
+    private Integer id;
+    private String name;
+    private Date joinData;
+}
+```
+
+
 
 </div> </details>
 
 <details> <summary>UserController 전체 소스(클릭)</summary> <div markdown="1">
+
+```java
+package com.example.restfulwebservice.user;
+
+import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
+import java.util.List;
+
+@RestController
+@AllArgsConstructor
+public class UserController {
+    private UserDaoService service;
+
+   // 전체유저 조회
+    @GetMapping("/users")
+    public List<User> retrieveAllUsers(){
+        return service.findAll();
+    }
+    // 특정유저 조회
+    @GetMapping("/users/{id}")
+    public User retrieveUsers(@PathVariable int id){
+        return service.findOne(id);
+    }
+    
+    // 유저 추가
+    //Post와 Put 메소드에서 클라이언트로부터 Json/XML과 같은 오브젝트를 받기
+    // 위해서는 매개변수에 타입에 리퀘스트바디를 선언해야함
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user){
+        User savedUser = service.save(user);
+    }
+
+    // 특정유저 삭제
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id){
+        User user = service.deleteById(id);
+    }
+}
+```
+
+
 
 </div> </details>
 
 <details> <summary>UserDaoService 전체 소스(클릭)</summary> <div markdown="1">
 
 ```java
+package com.example.restfulwebservice.user;
+
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 @Service
 public class UserDaoService {
     private static List<User> users = new ArrayList<>();
+
     private static int usersCount = 3;
 
     static {
@@ -201,6 +331,14 @@ public class UserDaoService {
         return users;
     }
 
+    public User save(User user){
+        if(user.getId() == null){
+            user.setId(++usersCount);
+        }
+        users.add(user);
+        return user;
+    }
+
     public User findOne(int id){
         for (User user : users){
             if(user.getId() ==id){
@@ -209,13 +347,20 @@ public class UserDaoService {
         }
         return null;
     }
-    
-    public User save(User user){
-        if(user.getId() == null){
-            user.setId(++usersCount);
+
+    public User deleteById(int id){
+        Iterator<User> iterator = users.iterator();
+
+        while(iterator.hasNext()){
+            User user = iterator.next();
+
+            if(user.getId() == id){
+                iterator.remove();
+                return user;
+            }
         }
-        users.add(user);
-        return user;
+
+        return null;
     }
 }
 ```
