@@ -80,9 +80,7 @@ char a = 'a';
 temp += a -'0'; // 편법으로 유용하게 사용 가능
 ```
 
-
-
----
+<br/>
 
 ## Vector
 
@@ -153,11 +151,36 @@ int main() {
 //각각 시작 인덱스인 0, 3이 출력됨
 ```
 
+<br/>
+
+## List
+
+직접 접근이 어려운 단점이 있지만, 중간이 삽입, 삭제는 O(1)의 시간복잡도로 가능.
+
+### Insert, 출력
+
+```c
+#include <list>
+
+list<int> list1;
+list1.push_back(20);
+list1.push_back(30);
+
+// 두 번째 위치에 10을 3개 삽입.
+iterInsertPos = list1.begin();
+++iterInsertPos;
+list1.insert(iterInsertPos, 3, 10);
+
+// 20,10,10,10,30 순으로 출력.
+iterEnd = list1.end();
+for (list<int>::iterator iterPos = list1.begin(); iterPos != iterEnd; ++iterPos) {
+    cout << "list 1 : " << *iterPos << endl;
+}
+```
 
 
 
-
----
+<br/>
 
 ## Queue
 
@@ -165,11 +188,9 @@ int main() {
 
 iterator도 못씀
 
+<br/>
 
 
-
-
----
 
 ## Map
 
@@ -205,9 +226,7 @@ for (iter = m.begin(); iter != m.end(); ++iter) {
 }
 ```
 
-
-
----
+<br/>
 
 ## Set
 
@@ -228,9 +247,7 @@ s.insert(temp);
 
 
 
-
-
----
+<br/>
 
 ## Tree
 
@@ -240,7 +257,7 @@ s.insert(temp);
 
 [프로그래머스 길찾기게임](https://jeonghoon.netlify.app//Algorithm/Programmers/2019kakao_find_load/)
 
----
+<br/>
 
 ## 정렬
 
