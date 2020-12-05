@@ -300,3 +300,204 @@ bool operator<(SHARK a, SHARK b) {
  pq.push({ nr,nc })
 ```
 
+<br/>
+
+## 순열 / 조합
+
+### 순열
+
+순서가 있다. 아래와 같이 출력되어야 한다.
+
+```
+5개 뽑을 때
+int arr[5] = {1,2,3,4,5}
+1 2 3 4 5
+1 2 3 5 4
+1 2 4 3 5
+1 2 4 5 3
+1 2 5 3 4
+1 2 5 4 3
+...
+
+3개 뽑을 때
+int arr[5] = {1,2,3,4,5}
+1 2 3
+1 2 4
+1 2 5
+1 3 2
+1 3 4
+1 3 5
+```
+
+<br/>
+
+내가 정형화해서 쓰는 코드는 다음과 같다.
+
+```c
+vector<int> v = { 1,2,3,4,5 };
+vector<int> temp;
+bool check[5] = { 0, };
+
+void dfs(int depth) {
+	if (depth == v.size()) { // v.size()를 3으로 변경하면 3개 출력
+		for (int i = 0; i < v.size(); ++i) // v.size()를 3으로 변경하면 3개 출력
+			cout << temp[i];
+		cout << '\n';
+		return;
+	}
+
+	for (int i = 0; i < v.size(); ++i) {
+		if (check[i] == true)continue;
+		check[i] = true;
+		temp.push_back(v[i]);
+		dfs(depth + 1);
+		check[i] = false;
+		temp.pop_back();
+	}
+}
+```
+
+<br/>
+
+### 중복순열
+
+순서가 있고 중복 가능하다. 아래와 같이 출력되어야 한다.
+
+```
+5개 뽑을 때
+int arr[5] = {1,2,3,4,5}
+1 1 1 1 1
+1 1 1 1 2
+1 1 1 1 3
+1 1 1 1 4
+1 1 1 1 5
+1 1 1 2 1
+...
+
+3개 뽑을 때
+int arr[5] = {1,2,3,4,5}
+1 1 1
+1 1 2
+1 1 3
+1 1 4
+1 1 5
+1 2 1
+1 2 2
+...
+```
+
+<br/>
+
+내가 정형화해서 쓰는 코드는 다음과 같다. 
+
+```c
+// 중복 처리 할 필요가 없어 check 배열 빠짐
+vector<int> v = { 1,2,3,4,5 };
+vector<int> temp;
+
+void dfs(int depth) {
+	if (depth == v.size()) { // 마찬가지로 변경
+		for (int i = 0; i < v.size(); ++i) // 마찬가지로 변경
+			cout << temp[i];
+		cout << '\n';
+		return;
+	}
+
+	for (int i = 0; i < v.size(); ++i) {
+		temp.push_back(v[i]);
+		dfs(depth + 1);
+		temp.pop_back();
+	}
+}
+```
+
+<br/>
+
+### 조합
+
+순서가 없다. 아래와 같이 출력되어야 한다.
+
+```
+int arr[5] = {1,2,3,4,5}
+여기서 3개만 뽑으면,
+1 2 3
+1 2 4
+1 2 5
+1 3 4
+1 3 5
+...
+```
+
+<br/>
+
+내가 정형화해서 쓰는 코드는 다음과 같다.
+
+```c
+vector<int> v = { 1,2,3,4,5 };
+vector<int> temp;
+bool check[5] = { 0, };
+
+void dfs(int depth, int idx) { // 여기에 idx 추가
+	if (depth == 3) { // 여기와
+		for (int i = 0; i < 3; ++i) // 여기에 몇개 뽑는지
+			cout << temp[i];
+		cout << '\n';
+		return;
+	}
+
+	for (int i = idx; i < v.size(); ++i) { // i = idx로
+		if (check[i] == true)continue;
+		check[i] = true;
+		temp.push_back(v[i]);
+		dfs(depth + 1, i + 1); // i + 1 추가
+		check[i] = false;
+		temp.pop_back();
+	}
+}
+```
+
+<br/>
+
+### 중복 조합
+
+순서가 없으며 중복이 가능하다. 아래와 같이 출력되어야 한다.
+
+```
+int arr[5] = {1,2,3,4,5}
+여기서 3개만 뽑으면,
+1 1 1
+1 1 2
+1 1 3
+1 1 4
+1 1 5
+1 2 2
+1 2 3
+...
+```
+
+<br/>
+
+내가 정형화해서 쓰는 코드는 다음과 같다.
+
+```c
+// 중복 처리 할 필요가 없어 check 배열 빠짐
+vector<int> v = { 1,2,3,4,5 };
+vector<int> temp;
+
+void dfs(int depth, int idx) {
+	if (depth == 3) {
+		for (int i = 0; i < 3; ++i)
+			cout << temp[i];
+		cout << '\n';
+		return;
+	}
+
+	for (int i = idx; i < v.size(); ++i) {
+		temp.push_back(v[i]);
+		dfs(depth + 1, i); // 중복처리 해야하므로 i + 1 에서 i로 수정
+		temp.pop_back();
+	}
+}
+```
+
+<br/>
