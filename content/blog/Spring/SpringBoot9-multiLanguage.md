@@ -14,6 +14,8 @@ draft: false
 
 먼저 리소스 폴더 밑에 다음과 같이 임의의 언어파일을 추가하였다.
 
+![image-20201227184243004](SpringBoot9-multiLanguage.assets/image-20201227184243004.png)
+
 messages.properties
 
 ```
@@ -36,13 +38,16 @@ greeting.message=Bonjour
 
 그리고 컨트롤러에 다음과 같이 Accept-Language를 헤더로 갖는 Get 메서드를 추가하였다. 헤더의 Accept-Language의 값이 바뀌면 그에 맞는 언어의 파일을 불러올 것이다.
 
-만약 헤더에 Accept-Language가 포함되지 않으면 디폴트값으로 한국어가 출력될 것이다.
+만약 헤더에 Accept-Language가 포함되지 않으면 디폴트값으로 한국어가 출력될 것이다. 기존의 `HelloWorldController` 클래스에 다음과 같은 코드를 추가하였다.
 
 ```java
-@GetMapping(path = "/hello-world-internationalized")
-public String helloWorldInternationalized(
-    @RequestHeader(name="Accept-Language", required = false) Locale locale){
-    return messageSource.getMessage("greeting.message", null, locale);
+public class HelloWorldController {
+
+    @GetMapping(path = "/hello-world-internationalized")
+    public String helloWorldInternationalized(
+        @RequestHeader(name="Accept-Language", required = false) Locale locale){
+        return messageSource.getMessage("greeting.message", null, locale);
+    }
 }
 ```
 
@@ -70,14 +75,17 @@ public final class Locale implements Cloneable, Serializable {
 아무튼 우리가 정의한 메서드를 사용하기 위해서 의존성 주입을 해주어야 한다. 이번에는 생성자나 Setter 메서드가 아닌, @Autowired를 사용하였다. 의존성 주입의 개념과 방법들을 알았으니 앞으로는 @Autowired를 애용할 예정이다.
 
 ```java
-//이 부분 추가
-@Autowired
-private MessageSource messageSource;
+public class HelloWorldController {
 
-@GetMapping(path = "/hello-world-internationalized")
-public String helloWorldInternationalized(
-    @RequestHeader(name="Accept-Language", required = false) Locale locale){
-    return messageSource.getMessage("greeting.message", null, locale);
+    //이 부분 추가
+    @Autowired
+    private MessageSource messageSource;
+
+    @GetMapping(path = "/hello-world-internationalized")
+    public String helloWorldInternationalized(
+        @RequestHeader(name="Accept-Language", required = false) Locale locale){
+        return messageSource.getMessage("greeting.message", null, locale);
+    }
 }
 ```
 
