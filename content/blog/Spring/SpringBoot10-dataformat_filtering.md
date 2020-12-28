@@ -1,6 +1,6 @@
 ---
 
-title: Spring boot) Json에서 XML형식으로 변환
+title: Spring boot) Json에서 XML형식으로 변환(jackson-dataformat-xml)
 date: 2020-12-27 16:21:20
 category: Spring
 draft: false
