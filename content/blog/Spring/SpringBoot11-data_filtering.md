@@ -30,7 +30,7 @@ public class User {
 
 <br/>
 
-이에 맞게 데이터도 수정해주고 
+이에 맞게 데이터도 수정해주고
 
 ```java
 @Service
