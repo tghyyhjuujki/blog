@@ -14,11 +14,13 @@ Spring boot 2.4.1
 
 Gradle
 
+Jenkins
+
 AWS EC2, S3, CodeDeploy, ALB
 
 <br/>
 
-이번에는 지난 포스트에서 구축한 서버들을 토대로 CI를 구축해보겠다. 붉은 네모의 내용을 구축하고 전체적으로 연동테스트를 진행한다.
+[지난 포스트](https://jeonghoon.netlify.app/Jenkins/jenkins-codedeploy/)에서 구축한 서버들을 토대로 CI를 구축해보겠다. 붉은 네모의 내용을 구축하고 전체적으로 연동테스트를 진행한다.
 
 ![image-20201229203044901](jenkins-codedeploy2.assets/image-20201229203044901.png)
 
@@ -26,7 +28,7 @@ AWS EC2, S3, CodeDeploy, ALB
 
 ### App 서버 수정
 
-파이프라인을 보면, 내가 작업한 소스가 Github에 먼저 올라가는 것을 확인할 수 있다. Github 레파지토리가 필요한데, 나는 기존에 공부용으로 사용하던 Spring boot 앱서버를 가져왔다.
+파이프라인을 보면, 처음 단계가 GitHub에 커밋하는 것이다. Github 레파지토리가 필요한데, 나는 기존에 공부용으로 사용하던 Spring boot 앱서버를 가져왔다.
 
 여기에 몇가지 추가를 해야한다. 먼저 루트에 appspec.yml파일을 만들어준다. 그리고 ec2 내부에서 실행될 shell 파일을 만들어준다. 
 
