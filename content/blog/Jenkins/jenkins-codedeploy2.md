@@ -26,21 +26,25 @@ AWS EC2, S3, CodeDeploy, ALB
 
 <br/>
 
-### App 서버 수정
+### GitHub Repository
 
 파이프라인을 보면, 처음 단계가 GitHub에 커밋하는 것이다. Github 레파지토리가 필요한데, 나는 기존에 공부용으로 사용하던 Spring boot 앱서버를 가져왔다.
 
-여기에 몇가지 추가를 해야한다. 먼저 루트에 appspec.yml파일을 만들어준다. 그리고 ec2 내부에서 실행될 shell 파일을 만들어준다. 
+<br/>
+
+### App 서버 수정
+
+Spring boot 프로젝트에 몇가지 추가를 해야한다. 먼저 루트에 appspec.yml파일을 만들어준다. 그리고 ec2 내부에서 실행될 shell 파일을 만들어준다. 
 
 ![image-20201229203438768](jenkins-codedeploy2.assets/image-20201229203438768.png)
 
 <br/>
 
-appspec.yml
+appspec.yml 을 만들어준다. 각각의 파일을 훅하는 기능을 갖는다.
 
 ```yaml
 version: 0.0
-os: lunux
+os: linux
 
 files:
   - source: /
@@ -264,7 +268,7 @@ Could not find tools.jar. Please check that /usr/lib/jvm/java-1.8.0-openjdk-1.8.
 
 <br/>
 
-Could not find tools.jar를 찾지 못한다는 메세지가 떴다. 자바는 멀쩡하게 설치되어 있는 걸 보니 환경변수가 잘못된 지점을 가리키고 있는 것 같다.
+위에서 tools.jar를 찾지 못한다는 메세지가 떴다. 자바는 멀쩡하게 설치되어 있는 걸 보니 환경변수가 잘못된 지점을 가리키고 있는 것 같다.
 
 ![image-20201230105339143](jenkins-codedeploy2.assets/image-20201230105339143.png)
 

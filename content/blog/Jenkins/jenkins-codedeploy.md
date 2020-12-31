@@ -104,7 +104,7 @@ systemctl list-units --type=service
 
 <br/>
 
-이와 같은 방법으로 인스턴스 하나 더 만들자. 생성 후 CI-AppServer1,2라고 태그를 달았다.
+이와 같은 방법으로 인스턴스 하나 더 만들자. 이미지를 복사해도 되고, 그냥 새로 만들어도 된다. 생성 후 CI-AppServer1,2라고 태그를 달았다.
 
 ![image-20201229202820464](jenkins-codedeploy.assets/image-20201229202820464.png)
 
