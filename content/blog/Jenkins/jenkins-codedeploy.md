@@ -18,7 +18,7 @@ AWS EC2, S3, CodeDeploy, ALB
 
 <br/>
 
-[이전 포스트](https://jeonghoon.netlify.app/Jenkins/aws_jenkins/)에서 젠킨스 서버를 구축하였다. 이 젠킨슨서버와 S3, Codeploy, Github를 활용해 다음과 같은 CI 파이프라인을 구축하는 것이 목표이다.
+[이전 포스트](https://jeonghoon.netlify.app/Jenkins/aws_jenkins/)에서 젠킨스 서버를 구축하였다. 이 젠킨슨서버와 S3, Codeploy, Github를 활용해 다음과 같은 배포라인을 구축하여 CI/CD를 구현하는 것이 목표이다.
 
 ![image-20201229201702453](jenkins-codedeploy.assets/image-20201229201702453.png)
 
