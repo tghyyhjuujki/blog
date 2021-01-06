@@ -6,6 +6,18 @@ category: Spring
 draft: false
 ---
 
+### 개발환경
+
+IntelliJ
+
+Spring boot 2.4.1
+
+Gradle
+
+<br/>
+
+### Hateoas로 REST API 처리하기
+
 Hateoas는 하이퍼 미디어(파일이나 영상 등)를 REST API의 상태정보를 관리하기 위한 메커니즘으로 활용하는 것이다. 쉽게 말해, 텍스트 아닌 리소스도 관리할 수 있다.
 
 <br/>
@@ -67,3 +79,5 @@ User 클래스의 @JsonFilter를 삭제하던가 아니면 AdminUserController�
 <br/>
 
 이미지나 동영상은 추후에 넣어보도록 하겠다.
+
+<br/>
