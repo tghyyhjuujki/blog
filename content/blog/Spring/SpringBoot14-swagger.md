@@ -53,7 +53,7 @@ public class SwaggerConfig {
 
 Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
 
-이런 저런 짓을 하다가 찾은 것은, Swagger2는 Spring boot 2.2 이상 버전에서 Swagger 2.x 버전과 호환이 되지 않았다. 따라서 문제가 생긴 사람들은 아래와 같이 Swagger의 버전을 3.0.0으로 바꿔주면 되겠다
+이런 저런 짓을 하다가 찾은 것은, Swagger2는 Spring boot 2.2 이상 버전에서 Swagger 2.x 버전과 호환이 되지 않는다는 것이었다. 그래서 아래와 같이 바꿔줬다.
 
 ```
 compile group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
@@ -68,7 +68,7 @@ compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
 
 <br/>
 
-자 이제 http://localhost:8088/swagger-ui.html 에 들어가면?
+하지만 http://localhost:8088/swagger-ui.html 에 들어가서는 Swagger-ui는 보이지 않았다.
 
 ![image-20210106033538665](SpringBoot14-swagger.assets/image-20210106033538665.png)
 
