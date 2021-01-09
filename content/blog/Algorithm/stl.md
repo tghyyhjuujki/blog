@@ -201,8 +201,13 @@ iterator도 못씀
 
 map<char, int> m;
 string s = "aba";
-for(int i=0;i<s.size();++i)
+for(int i=0;i<s.size();++i){
+    // 간편하게 늘리 때
     m[s[i]]++;
+    
+    // 삽입
+    m.insert({ stones[i], i }); 
+}
 
 //a에 2 b에 1 저장되어있음
 
@@ -212,6 +217,8 @@ if(m.count("a")){
     cout<< m["a"];
 }
 ```
+
+<br/>
 
 ### 순회
 
@@ -228,9 +235,36 @@ for (iter = m.begin(); iter != m.end(); ++iter) {
 
 <br/>
 
+### 이전값 iterator로 접근
+
+```c
+iter = m.end();
+int max = (*--iter).first;
+```
+
+<br/>
+
+### Map에서 최대 최소
+
+내장함수를 들여다보면 다음과 같다. _Pr이 오름, 내림 설정 할 수 있다. _Pr에 들어올 수 있는 값으로, greater, less, greater_equal, less_equal이 있다.
+
+![image-20210109191044246](stl.assets/image-20210109191044246.png)
+
+![image-20210109191258267](stl.assets/image-20210109191258267.png)
+
+```c
+map<int, int, greater<int> > m;
+```
+
+
+
+<br/>
+
 ## Set
 
-중복을 처리해줘야할 때 사용 가능
+map에서 key만 있다고 생각하면 된다. 또한 key는 중복되지 않는다.
+
+따라서 중복인지 아닌지 판단할 때 유용하게 사용 가능하다.
 
 ex) dfs에서 중복을 처리할  때 사용 가능
 
