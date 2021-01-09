@@ -107,7 +107,19 @@ int col = 10;
 v.assign(row, vector<int>(col, 1));
 ```
 
+<br/>
 
+### 최대, 최소값 구하기
+
+max_element, min_element는 주소값을 가리키므로, 포인터로 접근해서 값을 가져와야한다. 또한 iterator로도 접근 가능하다.
+
+```c
+#include <algorithm>
+vector<int> stones
+e = *max_element(stones.begin(), stones.end())
+```
+
+<br/>
 
 ### find()
 
@@ -129,6 +141,8 @@ if(iter == v.end())
     cout << "없음";		//없음 출력
 else cout << "있음";
 ```
+
+<br/>
 
 문자열 안에서 문자열 찾기
 
