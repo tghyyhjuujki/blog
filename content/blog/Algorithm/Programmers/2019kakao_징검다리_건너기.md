@@ -31,7 +31,9 @@ answer = 2
 
 시간복잡도는 각 영역에서 최대값을 구하는 작업이 logN 시간 소요되고,
 
-이러한 작업을 stones의 사이즈인 N만큼 반복해야 하므로 N*logN이다.
+이러한 작업을 stones의 사이즈인 N만큼 반복해야 하므로 
+
+총 소요시간은 N*logN이다.
 
 ```c
 #include <string>
@@ -77,7 +79,9 @@ int solution(vector<int> stones, int k) {
 
 시간복잡도는, 건널 수 있는 사람의 수를 1/2로 나누는 작업을 반복하므로 logN,
 
-그 사람들을 stones의 사이즈 N만큼 반복해야 하므로  N*logN이다.
+그 사람들을 stones의 사이즈 N만큼 반복해야 하므로  
+
+총 소요시간은 N*logN이다.
 
 ```c
 #include <string>
