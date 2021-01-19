@@ -1,7 +1,7 @@
 ---
 title: Java 알고리즘 풀이를 위한 잡기술 정리(계속 업데이트)
 date: 2021-01-19 01:08:84
-category: Algorithm
+category: 
 draft: false
 ---
 
